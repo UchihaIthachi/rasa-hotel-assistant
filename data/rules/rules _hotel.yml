@@ -1,0 +1,12 @@
+version: "3.1"
+
+rules:
+  - rule: open time
+    steps:
+      - intent: open_days
+      - action: utter_opendays
+
+  - rule: open hours
+    steps:
+      - intent: open_hours
+      - action: utter_openhours

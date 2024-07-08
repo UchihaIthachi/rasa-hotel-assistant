@@ -1,47 +1,5 @@
 version: "3.1"
 stories:
-  - story: happy path
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: mood_great
-      - action: utter_happy
-
-  - story: sad path 1
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: mood_unhappy
-      - action: utter_cheer_up
-      - action: utter_did_that_help
-      - intent: affirm
-      - action: utter_happy
-
-  - story: sad path 2
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: mood_unhappy
-      - action: utter_cheer_up
-      - action: utter_did_that_help
-      - intent: deny
-      - action: utter_goodbye
-
-  - story: Book room affirm path
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: book_room
-        entities:
-          - location: room
-      - action: form_book_room
-      - active_loop: form_book_room
-      - active_loop: null
-      - action: action_reset_slots
-      - action: utter_is_that_all
-      - intent: affirm
-      - action: utter_goodbye
-
   - story: Book room deny path
     steps:
       - intent: greet
@@ -329,11 +287,6 @@ stories:
       - intent: deny
       - action: utter_d
 
-  - story: greet path
-    steps:
-      - intent: greet
-      - action: utter_greet
-
   - story: book room path
     steps:
       - intent: book_room
@@ -353,16 +306,6 @@ stories:
       - intent: faq_check_out_time
       - action: utter_faq_check_out_time
 
-  - story: Restaurant time
-    steps:
-      - intent: faq_restaurant_time
-      - action: utter_restaurant_time
-
-  - story: Goodbye
-    steps:
-      - intent: goodbye
-      - action: utter_goodbye
-
   - story: Number of rooms
     steps:
       - intent: num_rooms
@@ -372,16 +315,6 @@ stories:
     steps:
       - intent: type_rooms
       - action: utter_ask_room_type
-
-  - story: Fallback message story
-    steps:
-      - intent: nlu_fallback
-      - action: utter_fallback_message
-
-  - story: Food items story
-    steps:
-      - intent: ask_food_items
-      - action: utter_food_items
 
   - story: room image story
     steps:

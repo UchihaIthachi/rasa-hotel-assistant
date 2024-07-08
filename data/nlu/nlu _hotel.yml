@@ -1,82 +1,5 @@
 version: "3.1"
 nlu:
-  - intent: greet
-    examples: |
-      - hey
-      - hello
-      - hi
-      - good morning
-      - good evening
-      - hey there
-      - hello there
-      - heyo
-
-  - intent: affirm
-    examples: |
-      - yes
-      - indeed
-      - of course
-      - that sounds good
-      - correct
-      - affirmative
-      - ok
-      - okay
-      - for sure
-      - yeah
-      - yes sure
-
-  - intent: deny
-    examples: |
-      - no
-      - never
-      - I don't think so
-      - don't like that
-      - no way
-      - not really
-      - one more thing
-      - no man
-      - nope
-
-  - intent: goodbye
-    examples: |
-      - have a nice day!
-      - take care!
-      - have fun!
-      - adios!
-      - hasta la vista
-      - see ya
-
-  - intent: mood_great
-    examples: |
-      - perfect
-      - very good
-      - great
-      - amazing
-      - wonderful
-      - I am feeling very good
-      - I am great
-      - I'm good
-
-  - intent: mood_unhappy
-    examples: |
-      - sad
-      - very sad
-      - unhappy
-      - bad
-      - very bad
-      - awful
-      - terrible
-      - not very good
-      - extremely sad
-      - so sad
-
-  - intent: bot_challenge
-    examples: |
-      - are you a bot?
-      - are you a human?
-      - am I talking to a bot?
-      - am I talking to a human?
-
   - intent: open_days
     examples: |
       - when is the restaurant open?
@@ -91,14 +14,6 @@ nlu:
       - working hours
       - At what time are you opened
       - what are the working hours
-
-  - intent: food_categories
-    examples: |
-      - Food types in the restaurant
-      - what type of food do you have
-      - can you show me the food categories you have
-      - what categories of food do you have
-      - what categories do you serve at the restaurant
 
   - intent: book_room
     examples: |
@@ -185,6 +100,9 @@ nlu:
 
   - intent: faq_check_in_time
     examples: |
+      - what is the check-in time?
+      - what is the check in time?
+      - when is check-in?
       - what are your check-in timings?
       - check in timings?
       - check in time
@@ -201,6 +119,8 @@ nlu:
 
   - intent: faq_check_out_time
     examples: |
+      - what is the check-out time?
+      - when is check-out?
       - what are your check-out timings?
       - check out timings?
       - check out time
@@ -253,6 +173,13 @@ nlu:
       - inform me about the [restaurant](location)
       - where is [restaurant](location)?
 
+  - intent: ask_room_image
+    examples: |
+      - Can you show me a picture of a [simple](room_type) room?
+      - I want to see an image of the [deluxe](room_type) room.
+      - Show me a picture of a [simple](room_type) room.
+      - Can I see a [deluxe](room_type) room image?
+
   - intent: faq_breakfast_avail
     examples: |
       - does the hotel offer breakfast?
@@ -279,87 +206,3 @@ nlu:
       - which time is the breakfast served?
       - you serve breakfast at what time?
       - what is the timing for breakfast?
-
-  - intent: faq_restaurant_time
-    examples: |
-      - what are timings of your [restaurant](location)?
-      - what is the time of the [restaurant](location)?
-      - timings of [restaurant](location)
-      - [restaurant](location) open time
-      - [restaurant](location) open timings
-      - [restaurant](location) timings
-      - till when [restaurant](location) remain open?
-      - till what time will the [restaurant](location) remain open?
-      - can you share the timings of [restaurant](location)?
-
-  - intent: faq_check_in_time
-    examples: |
-      - what is the check-in time?
-      - what is the check in time?
-      - when is check-in?
-
-  - intent: faq_check_out_time
-    examples: |
-      - what is the check-out time?
-      - when is check-out?
-
-  - intent: ask_room_image
-    examples: |
-      - Can you show me a picture of a [simple](room_type) room?
-      - I want to see an image of the [deluxe](room_type) room.
-      - Show me a picture of a [simple](room_type) room.
-      - Can I see a [deluxe](room_type) room image?
-
-  - intent: ask_food_items
-    examples: |
-      - foods?
-      - food items?
-      - food categories?
-      - food items available?
-
-  - synonym: room
-    examples: |
-      - rooms
-      - Room
-      - Rooms
-
-  - synonym: restaurant
-    examples: |
-      - restaurants
-      - Restaurants
-      - resturant
-      - restaurante
-      - resteraunt
-      - Resturant
-      - Restaurante
-      - Resteraunt
-      - resturants
-      - restaurantes
-      - resteraunts
-      - Resturants
-      - Restaurantes
-      - Resteraunts
-
-  - synonym: standard
-    examples: |
-      - simple
-      - simpl
-      - Standard
-      - standart
-
-  - synonym: deluxe
-    examples: |
-      - lux
-      - luxur
-      - Lux
-      - Luxur
-      - Deluxe
-      - delux
-
-  - regex: affirm
-    examples: |
-      - ^(Yes|yes)\s?[^\s]\*$
-
-  - regex: deny
-    examples: |
-      - ^((No|no|nope)\s?[^\s]_)|([^\s]_\s?(No|no))$

@@ -9,6 +9,16 @@ intents:
   - affirm
   - deny
   - goodbye
+  - nlu_fallback
+  - bot_challenge
+
+  ############################## Mood #########################
+  - mood_great
+  - mood_unhappy
+
+  ############################## Hotel ########################
+  - open_days
+  - open_hours
   - book_room
   - num_rooms
   - type_rooms
@@ -24,15 +34,16 @@ intents:
   - faq_breakfast_avail
   - faq_breakfast_time
   - faq_restaurant_time
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - open_days
-  - open_hours
-  - food_categories
-  - nlu_fallback
-  - ask_food_items
   - ask_room_image
+
+  ############################## Resturant ########################
+
+  - food_categories
+  - ask_food_items
+
+  ############################## Out of scope ########################
+  - out_of_scope/non_english
+  - out_of_scope/other
 
 entities:
   - number
@@ -185,6 +196,10 @@ responses:
     - text: "Is there anything else I can assist you with?"
     - text: "Was this information useful?"
     - text: "Hope that answered your question! Need any more help?"
+  utter_out_of_scope/non_english:
+    - text: "I only understand English, I'm sorry."
+  utter_out_of_scope/other:
+    - text: "I can't help you with that, I'm sorry."
 
 actions:
   - action_show_food_categories
