@@ -1,0 +1,10 @@
+# Ignore models and database directories
+/models
+/docker/db
+
+# Ignore specific files and directories
+.rasa/
+.keras/
+__pycache__/
+.config/
+.env
