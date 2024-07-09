@@ -42,8 +42,8 @@ intents:
   - ask_food_items
 
   ############################## Out of scope ########################
-  - out_of_scope/non_english
-  - out_of_scope/other
+  - out_of_scope_non_english
+  - out_of_scope_other
 
 entities:
   - number
@@ -196,9 +196,9 @@ responses:
     - text: "Is there anything else I can assist you with?"
     - text: "Was this information useful?"
     - text: "Hope that answered your question! Need any more help?"
-  utter_out_of_scope/non_english:
+  utter_out_of_scope_non_english:
     - text: "I only understand English, I'm sorry."
-  utter_out_of_scope/other:
+  utter_out_of_scope_other:
     - text: "I can't help you with that, I'm sorry."
 
 actions:

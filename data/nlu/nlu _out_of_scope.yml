@@ -1,6 +1,6 @@
 version: "3.1"
 nlu:
-  - intent: out_of_scope/non_english
+  - intent: out_of_scope_non_english
     examples: |
       - Wie fange ich mit Rasa an?
       - hilf mir beim start
@@ -99,7 +99,7 @@ nlu:
       - ధన్యవాదాలు
       - நன்றி
 
-  - intent: out_of_scope/other
+  - intent: out_of_scope_other
     examples: |
       - I am asking you an out of scope question
       - 4 + 2 = ?
