@@ -53,6 +53,19 @@ docker-rm: ## Remove Docker containers
 	@echo "Removing Docker containers..."
 	docker-compose -f $(DOCKER_COMPOSE) rm -f
 
+docker-clean-full: ## Clean Docker resources
+	@echo "Cleaning Docker resources..."
+	docker stop $(docker ps -aq) || true
+	docker rm $(docker ps -aq) || true
+	docker images -a
+	docker rmi -f $(docker images -aq) || true
+	docker network ls
+	docker network prune
+	docker volume ls
+	docker volume prune
+	docker system prune -a --volumes
+	docker system prune --volumes -f
+
 docker-clean: ## Clean Docker resources
 	@echo "Cleaning Docker resources..."
 	docker system prune --volumes -f
