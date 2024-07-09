@@ -1,0 +1,5 @@
+build:
+  docker:
+    web: docker/Dockerfile.rasa # Assuming the Rasa Dockerfile is in the docker directory
+run:
+  web: bash server.sh # This command will run your server.sh script to start your application

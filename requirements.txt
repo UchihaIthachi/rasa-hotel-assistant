@@ -1,3 +1,0 @@
-pyspellchecker
-regex
-sqlalchemy<2.0

@@ -1,0 +1,33 @@
+// {
+//     "name": "Rasa NLU Heroku template",
+//     "description": "A barebones Rasa NLU server installation using Docker",
+//     "repository": "https://github.com/just-ai/rasa-heroku-template",
+//     "logo": "https://s3-us-west-2.amazonaws.com/spaceocanadawp/2019/12/rasa-framework.png",
+//     "stack": "container"
+//   }
+{
+    "name": "hotel-assistant-rasa-bot",
+    "description": "A hotel assistant bot using Rasa and Docker.",
+    "stack": "container",
+    "scripts": {
+      "postdeploy": "bash server.sh"
+    },
+    "env": {
+      "DB_DATABASE": {
+        "description": "The database name for Rasa",
+        "value": "rasa"
+      },
+      "POSTGRESQL_USERNAME": {
+        "description": "The PostgreSQL username",
+        "value": "admin"
+      },
+      "POSTGRESQL_PASSWORD": {
+        "description": "The PostgreSQL password",
+        "value": "admin"
+      }
+    },
+    "addons": [
+      "heroku-postgresql:hobby-dev"
+    ]
+  }
+  
