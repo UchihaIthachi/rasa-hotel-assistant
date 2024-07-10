@@ -1,1 +1,52 @@
-./db
+# Ignore Python cache
+
+**pycache**
+_.pyc
+_.pyo
+
+# Ignore virtual environments
+
+venv/
+.env/
+
+# Ignore logs and temporary files
+
+_.log
+_.tmp
+\*.swp
+
+# Ignore Docker-specific files
+
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Ignore version control files
+
+.git
+.gitignore
+
+# Ignore node_modules
+
+node_modules/
+
+# Ignore build directories
+
+build/
+dist/
+
+# Ignore database files
+
+db/
+
+# Ignore IDE and editor specific files
+
+.vscode/
+.idea/
+_.sublime-project
+_.sublime-workspace
+
+# Ignore OS generated files
+
+.DS_Store
+Thumbs.db

@@ -1,27 +1,24 @@
 # build upon the latest version of the rasa api
 FROM rasa/rasa:latest
 
-# developer information
-#MAINTAINER Philipp Moehl <philipp.moehl@a1.group>
-
 # root permissions
 USER root
 
+# Copy application code
 COPY . /app
-COPY ./requirements.txt ./
+COPY ./app/requirements.txt ./
 
-# install spellchecking package
+# Install spellchecking package and other requirements
 RUN python -m pip install --upgrade pip
-RUN pip install -r requirements.txt
-
+RUN pip install -r app/requirements.txt
 
 WORKDIR /app
-# Train the Rasa model
-RUN rasa train --domain domain.yml --data data --out models --config configs/config_supervised.yml --augmentation 20
 
+# Train the Rasa model
+RUN rasa train --domain app/domain.yml --data app/data --out app/models --config app/configs/config_supervised.yml --augmentation 20
 
 # By best practices, don't run the code with root user
 USER 1001
 
-# Run Rasa
+# # Run Rasa
 CMD ["run", "--enable-api", "--cors", "*"]
