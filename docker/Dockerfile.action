@@ -15,4 +15,4 @@ RUN python -m pip install --upgrade pip
 # RUN pip install -r requirements_actions.txt
 
 # # Run Rasa actions server
-CMD ["rasa", "run", "actions", "--actions", "app.actions", "--cors", "*"]
+CMD ["start", "--actions", "actions"]# Extend the official Rasa SDK image

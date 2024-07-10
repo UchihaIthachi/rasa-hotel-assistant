@@ -1,23 +1,35 @@
 version: '3.8'
 services:
+  nginx:
+    image: nginx:latest
+    container_name: "rasa-nginx"
+    restart: "always"
+    ports:
+      - "80:80"
+    volumes:
+      - "../nginx/index.html:/usr/share/nginx/html/index.html"
+      - "../nginx/default.conf:/etc/nginx/conf.d/default.conf"
+    networks:
+      - rasa-network
   rasa:
-    image: rasa_custom:latest
+    image: rasa_custom:2.0
     ports:
       - "5005:5005"
     environment:
       DB_DATABASE: "rasa"
     depends_on:
       - db
-    volumes:
-      - ./app:/app
+    networks:
+    - rasa-network
 
   action_server:
-    image: rasa_action:latest
+    image: rasa_action:2.0
     ports:
-      - "5055:5055"
+      - 5055:5055
     volumes:
-      - ./app/actions:/app/actions
-
+      - ./actions:/app/actions
+    networks:
+      - rasa-network
   db:
     restart: always
     image: "bitnami/postgresql:11.7.0"
@@ -29,3 +41,7 @@ services:
       POSTGRESQL_DATABASE: "rasa"
     volumes:
       - ./db:/bitnami/postgresql
+
+networks:
+  rasa-network:
+    driver: bridge
