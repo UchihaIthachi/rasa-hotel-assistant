@@ -37,14 +37,13 @@ action_endpoint:
 # server based SQL database tracker store connectiing to the conversation logs
 # run startsql.sh for connecting to the database via postgresql
 tracker_store:
-  type: sql
+  type: SQL
   dialect: "postgresql"
-  url: "db"
-  port: "5432"
-  username: "admin"
-  password: "admin"
-  db: "rasa"
-  login_db: "rasa"
+  url: ${DB_HOST}
+  port: ${DB_PORT}
+  username: ${DB_USER}
+  password: ${DB_PASSWORD}
+  db: ${DB_DATABASE}
 #tracker_store:
 #    type: redis
 #    url: <host of the redis instance, e.g. localhost>
