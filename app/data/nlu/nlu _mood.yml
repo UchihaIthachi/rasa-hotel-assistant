@@ -1,0 +1,88 @@
+version: "3.1"
+nlu:
+  - intent: mood_great
+    examples: |
+      - perfect
+      - very good
+      - great
+      - amazing
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I'm good
+      - feeling like a king
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+      - fantastic
+      - excellent
+      - over the moon
+      - on cloud nine
+      - couldn't be better
+      - I'm on top of the world
+      - feeling wonderful
+      - feeling awesome
+      - in a good mood
+      - super happy
+      - full of joy
+      - I feel amazing
+      - everything is great
+      - loving life
+      - feeling ecstatic
+      - very pleased
+      - totally stoked
+      - just fabulous
+      - I feel awesome
+      - feeling unstoppable
+
+  - intent: mood_unhappy
+    examples: |
+      - sad
+      - very sad
+      - unhappy
+      - bad
+      - very bad
+      - awful
+      - terrible
+      - not very good
+      - extremely sad
+      - so sad
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - very sad
+      - not good
+      - so saad
+      - a little down
+      - grumpy
+      - feeling down
+      - feeling blue
+      - miserable
+      - depressed
+      - gloomy
+      - heartbroken
+      - down in the dumps
+      - not feeling great
+      - not in a good mood
+      - feeling terrible
+      - feeling awful
+      - not okay
+      - in a bad mood
+      - feeling upset
+      - feeling low
+      - I feel miserable
+      - everything is terrible
+      - feeling bummed out
+      - not happy
+      - pretty sad
+      - feeling hopeless
+      - just awful
+      - feeling rotten
+      - I feel awful

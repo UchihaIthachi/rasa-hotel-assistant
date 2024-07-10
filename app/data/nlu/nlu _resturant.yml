@@ -1,0 +1,28 @@
+version: "3.1"
+nlu:
+  - intent: food_categories
+    examples: |
+      - Food types in the restaurant
+      - what type of food do you have
+      - can you show me the food categories you have
+      - what categories of food do you have
+      - what categories do you serve at the restaurant
+
+  - intent: faq_restaurant_time
+    examples: |
+      - what are timings of your [restaurant](location)?
+      - what is the time of the [restaurant](location)?
+      - timings of [restaurant](location)
+      - [restaurant](location) open time
+      - [restaurant](location) open timings
+      - [restaurant](location) timings
+      - till when [restaurant](location) remain open?
+      - till what time will the [restaurant](location) remain open?
+      - can you share the timings of [restaurant](location)?
+
+  - intent: ask_food_items
+    examples: |
+      - foods?
+      - food items?
+      - food categories?
+      - food items available?
