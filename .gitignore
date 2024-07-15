@@ -1,13 +1,14 @@
 # Ignore models and database directories
-app/models
-/docker/db
-/venv
-/app/venv
-/app/models
-app/models/*.tar.gz
+app/models/
+/docker/db/
+/venv/
+/app/venv/
 # Ignore specific files and directories
 .rasa/
 .keras/
 __pycache__/
 .config/
 .env
+
+# Ignore .tar.gz files in app/models directory
+app/models/*.tar.gz
