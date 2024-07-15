@@ -10,5 +10,5 @@ __pycache__/
 .config/
 .env
 
-# Ignore .tar.gz files in app/models directory
+# Ignore .tar.gz files in app/models director
 app/models/*.tar.gz
