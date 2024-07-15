@@ -2,7 +2,9 @@
 app/models
 /docker/db
 /venv
-app/venv
+/app/venv
+/app/models
+kubectl.exe
 
 # Ignore specific files and directories
 .rasa/
@@ -10,3 +12,4 @@ app/venv
 __pycache__/
 .config/
 .env
+
