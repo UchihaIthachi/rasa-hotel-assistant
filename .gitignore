@@ -4,7 +4,7 @@ app/models
 /venv
 /app/venv
 /app/models
-
+app/models/
 # Ignore specific files and directories
 .rasa/
 .keras/
