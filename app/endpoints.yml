@@ -18,7 +18,6 @@
 
 action_endpoint:
   url: "http://action_server:5055/webhook"
-
 # Tracker store which is used to store the conversations.
 # By default the conversations are stored in memory.
 # https://rasa.com/docs/rasa/api/tracker-stores/
@@ -36,14 +35,14 @@ action_endpoint:
 
 # server based SQL database tracker store connectiing to the conversation logs
 # run startsql.sh for connecting to the database via postgresql
-tracker_store:
-  type: SQL
-  dialect: "postgresql"
-  url: ${DB_HOST}
-  port: ${DB_PORT}
-  username: ${DB_USER}
-  password: ${DB_PASSWORD}
-  db: ${DB_DATABASE}
+# tracker_store:
+#   type: SQL
+#   dialect: "postgresql"
+#   url: ${DB_HOST}
+#   port: ${DB_PORT}
+#   username: ${DB_USER}
+#   password: ${DB_PASSWORD}
+#   db: ${DB_DATABASE}
 #tracker_store:
 #    type: redis
 #    url: <host of the redis instance, e.g. localhost>

@@ -27,14 +27,14 @@ services:
       - "../app/endpoints.yml:/app/endpoints.yml"
       - "../app/domain.yml:/app/domain.yml"
       - "../app/configs:/app/config"
-    environment:
-      DB_HOST: db
-      DB_PORT: "5432"  # Replace with your PostgreSQL port
-      DB_USER: admin  # Replace with your PostgreSQL username
-      DB_PASSWORD: admin  # Replace with your PostgreSQL password
-      DB_DATABASE: rasa  # Replace with your PostgreSQL database name
-    depends_on:
-      - db
+    # environment:
+    #   DB_HOST: db
+    #   DB_PORT: "5432"  # Replace with your PostgreSQL port
+    #   DB_USER: admin  # Replace with your PostgreSQL username
+    #   DB_PASSWORD: admin  # Replace with your PostgreSQL password
+    #   DB_DATABASE: rasa  # Replace with your PostgreSQL database name
+    # depends_on:
+    #   - db
     networks:
       - rasa-network
 
@@ -51,22 +51,23 @@ services:
     networks:
       - rasa-network
 
-  db:
-    restart: always
-    image: "postgres:latest"  # Use the latest PostgreSQL image
-    ports:
-      - "5432:5432"
-    environment:
-      POSTGRES_USER: "admin"  # Set your desired username
-      POSTGRES_PASSWORD: "admin"  # Set your desired password
-      POSTGRES_DB: "rasa"  # Set your desired database name
-    volumes:
-      - ./db:/var/lib/postgresql/data  # Persist data outside the container
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U admin"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+  # database:
+  #   restart: always
+  #   image: "postgres:latest"  # Use the latest PostgreSQL image
+  #   ports:
+  #     - "5432:5432"
+  #   environment:
+  #     POSTGRES_USER: "admin"  # Set your desired username
+  #     POSTGRES_PASSWORD: "admin"  # Set your desired password
+  #     POSTGRES_DB: "rasa"  # Set your desired database name
+  #   volumes:
+  #     - ${PWD}/db:/var/lib/postgresql/data  # Persist data outside the container
+  #     - ${PWD}/init.sql:/docker-entrypoint-initdb.d/init.sql
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "pg_isready -U admin"]
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 5
 
 networks:
   rasa-network:

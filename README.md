@@ -130,9 +130,6 @@ hotel-assistant-rasa-bot/
 │   ├── startSql.bat                # Batch file to start SQL database access (Windows)
 │   ├── stop.sh                     # Script to stop Docker containers
 │   └── stop.bat                    # Batch file to stop Docker containers (Windows)
-├── server.sh                       # Server start script
-├── app.json                        # App configuration file
-├── heroku.yml                      # Heroku deployment configuration
 ├── Makefile                        # Makefile for automating tasks and commands
 ├── LICENSE                         # License information for the project
 └── README.md                       # Detailed documentation and instructions
