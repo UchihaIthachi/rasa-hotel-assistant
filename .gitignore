@@ -1,5 +1,5 @@
 # Ignore models and database directories
-app/models
+/app/models
 /docker/db
 /venv
 /app/venv
