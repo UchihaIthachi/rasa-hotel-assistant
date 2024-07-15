@@ -1,6 +1,8 @@
 # Ignore models and database directories
 /models
 /docker/db
+/venv
+/app/venv
 
 # Ignore specific files and directories
 .rasa/
