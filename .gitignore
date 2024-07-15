@@ -3,6 +3,7 @@ app/models
 /docker/db
 /venv
 /app/venv
+/app/models
 
 # Ignore specific files and directories
 .rasa/
