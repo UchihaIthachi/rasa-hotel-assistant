@@ -95,47 +95,48 @@ make run
 
 ```plaintext
 hotel-assistant-rasa-bot/
+├── app/
+│   ├── data/                       # Training data for Rasa
+│   │   ├── nlu/                    # NLU training data
+│   │   ├── stories/                # Core training data (conversation stories)
+│   │   └── rules/                  # Rule-based data for conversation handling
+│   ├── configs/                    # Configuration files for Rasa and other services
+│   │   ├── config_supervised.yml   # Configuration for supervised learning
+│   │   ├── config_custom.yml       # Configuration using custom pipelines
+│   │   ├── config_bert.yml         # Configuration using BERT embeddings
+│   │   └── config_spacy.yml        # Configuration using SpaCy
+│   ├── actions/                    # Custom action server files
+│   │   └── actions.py              # Custom action implementation
+│   ├── tests/                      # Directory for testing scripts or unit tests
+│   │   └── ...                     # Unit tests and testing scripts
+│   ├── resources/                  # Additional resources used in the project
+│   │   └── ...                     # Any additional resource files
+│   ├── domain.yml                  # Domain file defining intents, entities, and actions
+│   ├── endpoints.yml               # Endpoints configuration for Rasa and external services
+│   ├── components/                 # Custom pipeline components for Rasa
+│   │   └── spell_checker.py        # Custom spell-checker component
+│   ├── requirements.txt            # Python dependencies
+│   └── deb-requirements.txt        # Debian-based system dependencies
 ├── docker/
-│   ├── docker-compose.yml      # Docker Compose configuration for deployment
-│   ├── Dockerfile.rasa         # Dockerfile for building the Rasa server image
-│   └── Dockerfile.action       # Dockerfile for building the action server image
-├── requirements.txt            # Python dependencies
-├── actions/                    # Custom action server files
-│   └── actions.py              # Custom action implementation
-├── scripts/                    # Shell and batch scripts for automation
-│   ├── init.sh                 # Initialization script for setting up directories
-│   ├── init.bat                # Batch file for setting up directories (Windows)
-│   ├── start.sh                # Script to build and start Docker containers
-│   ├── start.bat               # Batch file to build and start Docker containers (Windows)
-│   ├── startSql.sh             # Script to start SQL database access
-│   ├── startSql.bat            # Batch file to start SQL database access (Windows)
-│   ├── stop.sh                 # Script to stop Docker containers
-│   └── stop.bat                # Batch file to stop Docker containers (Windows)
-├── configs/                    # Configuration files for Rasa and other services
-│   ├── config_supervised.yml   # Configuration for supervised learning
-│   ├── config_bert.yml         # Configuration using BERT embeddings
-│   └── config_spacy.yml        # Configuration using SpaCy
-├── data/                       # Training data for Rasa
-│   ├── nlu/                    # NLU training data
-│   │   ├── nlu.yml             # NLU training data
-│   │   └── ...                 # Additional NLU data files
-│   ├── stories/                # Core training data (conversation stories)
-│   │   ├── stories.yml         # Core training data (conversation stories)
-│   │   └── ...                 # Additional stories data files
-│   ├── rules/                  # Rule-based data for conversation handling
-│   │   ├── rules.yml           # Rule-based data for conversation handling
-│   │   └── ...                 # Additional rules data files
-├── tests/                      # Directory for testing scripts or unit tests
-│   └── ...                     # Unit tests and testing scripts
-├── resources/                  # Additional resources used in the project
-│   └── ...                     # Any additional resource files
-├── domain.yml                  # Domain file defining intents, entities, and actions
-├── endpoints.yml               # Endpoints configuration for Rasa and external services
-├── components/                 # Custom pipeline components for Rasa
-│   └── spell_checker.py        # Custom spell-checker component
-├── Makefile                    # Makefile for automating tasks and commands
-├── LICENSE                     # License information for the project
-└── README.md                   # Detailed documentation and instructions
+│   ├── docker-compose.yml          # Docker Compose configuration for deployment
+│   ├── Dockerfile.rasa             # Dockerfile for building the Rasa server image
+│   └── Dockerfile.action           # Dockerfile for building the action server image
+├── scripts/                        # Shell and batch scripts for automation
+│   ├── init.sh                     # Initialization script for setting up directories
+│   ├── init.bat                    # Batch file for setting up directories (Windows)
+│   ├── start.sh                    # Script to build and start Docker containers
+│   ├── start.bat                   # Batch file to build and start Docker containers (Windows)
+│   ├── startSql.sh                 # Script to start SQL database access
+│   ├── startSql.bat                # Batch file to start SQL database access (Windows)
+│   ├── stop.sh                     # Script to stop Docker containers
+│   └── stop.bat                    # Batch file to stop Docker containers (Windows)
+├── server.sh                       # Server start script
+├── app.json                        # App configuration file
+├── heroku.yml                      # Heroku deployment configuration
+├── Makefile                        # Makefile for automating tasks and commands
+├── LICENSE                         # License information for the project
+└── README.md                       # Detailed documentation and instructions
+
 ```
 
 ## Makefile Commands

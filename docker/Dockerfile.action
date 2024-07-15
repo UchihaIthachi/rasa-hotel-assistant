@@ -14,8 +14,5 @@ USER root
 RUN python -m pip install --upgrade pip
 # RUN pip install -r requirements_actions.txt
 
-# By best practices, don't run the code with root user
-USER 1001
-
-# Run the action server
-CMD ["start", "--actions", "actions"]
+# # Run Rasa actions server
+CMD ["start", "--actions", "actions"]# Extend the official Rasa SDK image

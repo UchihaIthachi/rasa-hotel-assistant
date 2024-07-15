@@ -1,0 +1,115 @@
+version: "3.1"
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - good morning
+      - good evening
+      - hey there
+      - hello there
+      - heyo
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+      - moin
+
+  - intent: affirm
+    examples: |
+      - yes
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+      - affirmative
+      - ok
+      - okay
+      - for sure
+      - yeah
+      - yes sure
+
+  - intent: deny
+    examples: |
+      - no
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+      - one more thing
+      - no man
+      - nope
+
+  - intent: goodbye
+    examples: |
+      - have a nice day!
+      - take care!
+      - have fun!
+      - adios!
+      - hasta la vista
+      - see ya
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - goodbye
+      - have a nice day
+      - see you around
+      - see you later
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+  - synonym: room
+    examples: |
+      - rooms
+      - Room
+      - Rooms
+
+  - synonym: restaurant
+    examples: |
+      - restaurants
+      - Restaurants
+      - resturant
+      - restaurante
+      - resteraunt
+      - Resturant
+      - Restaurante
+      - Resteraunt
+      - resturants
+      - restaurantes
+      - resteraunts
+      - Resturants
+      - Restaurantes
+      - Resteraunts
+
+  - synonym: standard
+    examples: |
+      - simple
+      - simpl
+      - Standard
+      - standart
+
+  - synonym: deluxe
+    examples: |
+      - lux
+      - luxur
+      - Lux
+      - Luxur
+      - Deluxe
+      - delux
+
+  - regex: affirm
+    examples: |
+      - ^(Yes|yes)\s?[^\s]\*$
+
+  - regex: deny
+    examples: |
+      - ^((No|no|nope)\s?[^\s]_)|([^\s]_\s?(No|no))$
