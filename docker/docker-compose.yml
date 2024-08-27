@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 services:
   nginx:
     image: nginx:latest
@@ -7,7 +7,8 @@ services:
     ports:
       - "80:80"
     volumes:
-      - "../nginx/index.html:/usr/share/nginx/html/index.html"
+      - "../front/index.html:/usr/share/nginx/html/index.html"
+      - "../front/static:/usr/share/nginx/html/static"
       - "../nginx/default.conf:/etc/nginx/conf.d/default.conf"
     networks:
       - rasa-network
@@ -72,4 +73,3 @@ services:
 networks:
   rasa-network:
     driver: bridge
-
